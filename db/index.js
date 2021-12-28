@@ -2,6 +2,7 @@ import * as SQLite from 'expo-sqlite'
 
 const db = SQLite.openDatabase('address.db')
 
+//Inicializamos la base de datos de SQLite
 export const init = () => {
     const promise = new Promise ((accept, reject) => {
         db.transaction((tx)=> {
@@ -11,7 +12,6 @@ export const init = () => {
             (_, err) => { reject(err)}
         })
     })
-
     return promise;
 }
 

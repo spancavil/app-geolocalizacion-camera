@@ -46,7 +46,7 @@ export const getLocation = () => {
         const data = await response.json();
         console.log(data);
         setStreet(data.data[0])
-        setMapPreview(`https://maps.googleapis.com/maps/api/staticmap?center=${location.lat},${location.lng}&zoom=13&size=600x300&maptype=roadmap&&markers=color:red%7Clabel:C%7C${location.lat},${location.lng}&key=${API_KEY}`) 
+        // setMapPreview(`https://maps.googleapis.com/maps/api/staticmap?center=${location.lat},${location.lng}&zoom=13&size=600x300&maptype=roadmap&&markers=color:red%7Clabel:C%7C${location.lat},${location.lng}&key=${API_KEY}`) 
     }
 
     const saveLocation = async () => {
